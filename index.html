@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Leslie</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 4em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bolder;"></h1>
+    <script>
+        const l = "Less <33";const n = ()=> parseInt(Math.random() * 255); let i = 0;
+        setInterval(()=>{
+            document.querySelector("h1").innerHTML += l[i];
+            i == l.length ? (i = 0, document.querySelector("h1").innerHTML = "") : i++;
+            document.querySelector("body").style.setProperty("background", `rgba(${n()}, ${n()}, ${n()}, .3)`)
+        }, 1000)
+    </script>
+</body>
+</html>
